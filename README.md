@@ -15,5 +15,12 @@ sudo certbot certonly --standalone
 
 
 ```bash
-npm run dev
+# Testing
+npm test
+# Or
+npm start
+
+
+#production
+npm run prod
 ```
