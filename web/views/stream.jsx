@@ -1,4 +1,4 @@
-const {React, View} = require('../setup.jsx')
+const {React, View} = require('../template.jsx')
 const videoStream = require('../components/stream')
 const backButton = require('./back-button.svg')
 

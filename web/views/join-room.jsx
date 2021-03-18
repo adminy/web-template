@@ -1,4 +1,4 @@
-const {React, View} = require('../setup.jsx')
+const {React, View} = require('../template.jsx')
 module.exports = (state, emitter) => {
     return <View class="room">
     <form id="joinRoom" class="form" autocomplete="off" onsubmit={state.onJoinRoom}>
