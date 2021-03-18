@@ -1,4 +1,4 @@
-const {React, View} = require('../template.jsx')
+const {React, View, BlockInput, Shadow, Footer} = require('../template.jsx')
 module.exports = (state, emitter) => {
     return <View class="room">
     <form id="joinRoom" class="form" autocomplete="off" onsubmit={state.onJoinRoom}>
@@ -11,27 +11,17 @@ module.exports = (state, emitter) => {
             <div id='error'>{state.error}</div>
             <br/>
         </div>
-        <div class="control block-cube block-input">
-            <input name="room-id" type="text" placeholder="Room ID" /> 
-            <div class="bg-top"> <div class="bg-inner"></div> </div>
-            <div class="bg-right"> <div class="bg-inner"></div> </div>
-            <div class="bg"> <div class="bg-inner"></div> </div>
-        </div>
-        <br/><br/>
-        <div class="control block-cube block-input">
+        <BlockInput>
+            <input name="room-id" type="text" placeholder="Room ID" />
+        </BlockInput>
+        <BlockInput>
             <input name="your-name" type="text" placeholder="Your Name" />    
-            <div class="bg-top"> <div class="bg-inner"></div> </div>
-            <div class="bg-right"> <div class="bg-inner"></div> </div>
-            <div class="bg"> <div class="bg-inner"></div> </div>
-        </div>
-        <br/><br/>        
+        </BlockInput>
         <button type="submit" class="btn block-cube block-cube-hover">
-            <div class="bg-top"> <div class="bg-inner"></div> </div>
-            <div class="bg-right"> <div class="bg-inner"></div> </div>
-            <div class="bg"> <div class="bg-inner"></div> </div>
+            <Shadow/>
             <div class="text"> Join </div>
         </button>
-        <div class="credits"> <a href="https://codeismagic.com/" target="_blank">Cloud 8</a> </div>
+        <Footer/>
     </form>
     </View>
 }

@@ -5,9 +5,12 @@ const backButton = require('./back-button.svg')
 module.exports = (state, emit) => {
     !state.connectingRoom && emit('connectRoom')
     return <View class="room">
-        <a href="/"><img src={backButton} width="48px" height="48px"/></a>
-        <br/>
+        <div class="display: flex;">
+            <a href="/"><img src={backButton} width="48px" height="48px"/></a>
+            <span style={'float:right; font-size: 48px; color: '+(state.meOnline ? 'green' : 'red')}>
+                {state.meOnline ? '☻' : '☹'}
+            </span>
+        </div>
         {videoStream(state, emit)}
-        {state.meOnline ? 'on' : 'off'}
     </View>
 }
