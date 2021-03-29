@@ -13,9 +13,7 @@ const ssl = !{
 
 const isMember = (ws, roomID) => ws.readyState == ws.OPEN && ws.user && ws.user.roomID == roomID
 
-
 loadSocketServer(ssl).then(server => {
-
 
     const updateRoom = roomID => [...server.websocketServer.clients].filter(ws => isMember(ws, roomID)).map(ws => ws.user.name)
 
@@ -26,8 +24,7 @@ loadSocketServer(ssl).then(server => {
         host && host.send(JSON.stringify(updateRoom(roomID)))
     }
 
-
-    server.static(process.cwd() + '/dist')
+    server.static(process.cwd() + '/web/index.html')
 
     // API here
     // server.get('/checkRoom/:roomID', (req, res) => res.send(updateRoom(req.params.roomID)))
@@ -59,3 +56,4 @@ loadSocketServer(ssl).then(server => {
 
     server.listen(ssl ? 443 : 80, '0.0.0.0').then(addr => console.log(`server listening on ${addr}`))
 })
+

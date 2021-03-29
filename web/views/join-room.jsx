@@ -1,4 +1,4 @@
-const {React, View, BlockInput, Shadow, Footer} = require('../template.jsx')
+const {React, View, BlockInput, Shadow, Footer} = require('../template')
 module.exports = (state, emitter) => {
     return <View class="room">
     <form id="joinRoom" class="form" autocomplete="off" onsubmit={state.onJoinRoom}>

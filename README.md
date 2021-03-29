@@ -17,10 +17,6 @@ sudo certbot certonly --standalone
 ```bash
 # Testing
 npm test
-# Or
+# production or just front-end changes
 npm start
-
-
-#production
-npm run prod
 ```
