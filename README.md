@@ -20,3 +20,5 @@ npm test
 # production or just front-end changes
 npm start
 ```
+
+!["Structure"](Untitled%20Diagram.png)
