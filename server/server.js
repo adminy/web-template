@@ -4,7 +4,6 @@ const loadSocketServer = async ssl => {
   await server.register(require('middie'))
   ssl && await server.register(require('fastify-https-redirect'), { httpPort: 80 })
   await server.register(require('fastify-websocket'), { options: { maxPayload: 16 * 1024 * 1024 } })
-  server.register(require('fastify-static'), { root: process.cwd() })
   await server.register(async (server, opts, done) => {
     await server.register(require('fastify-file-upload'))
     server.get('/status/:name', (req, res) => res.send(JSON.stringify({ status: 'ok', ...req.params })))

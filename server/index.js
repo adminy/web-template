@@ -23,7 +23,7 @@ loadSocketServer(ssl).then(server => {
     host && host.send(JSON.stringify(updateRoom(roomID)))
   }
 
-  server.static(process.cwd() + '/web/index.html')
+  server.parcel(process.cwd() + '/web/index.html')
 
   // API here
   // server.get('/checkRoom/:roomID', (req, res) => res.send(updateRoom(req.params.roomID)))
