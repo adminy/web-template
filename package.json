@@ -7,14 +7,15 @@
 		"test": "nodemon --ignore dist --ignore .cache server"
 	},
 	"dependencies": {
+		"bulma": "^0.9.3",
+		"choo": "^7.1.0",
 		"fastify": "^3.9.1",
 		"fastify-https-redirect": "^1.0.3",
 		"fastify-websocket": "^2.0.11",
+		"jsx-dom": "^7.0.0-beta.2",
 		"middie": "^5.2.0",
 		"nodemon": "^2.0.6",
 		"parcel-bundler": "^1.12.4",
-		"choo": "^7.1.0",
-		"jsx-dom": "^7.0.0-beta.2",
 		"sass": "^1.30.0"
 	},
 	"author": "Marin Bivol",

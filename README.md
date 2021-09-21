@@ -5,20 +5,20 @@
 npm i
 ```
 
-### Generate SSL certs on mac
+### Generate SSL certs
 ```bash
-brew install certbot
-sudo certbot certonly --standalone
+certbot certonly --standalone
 ```
 
-### To run development simply type
 
+### Get started
 
 ```bash
-# Testing
+# Developing (nodemon)
 npm test
-# production or just front-end changes
+
+# Single run
 npm start
 ```
 
-!["Structure"](Untitled%20Diagram.png)
+!["Structure"](structure.png)
